@@ -1,11 +1,12 @@
 'use strict';
 const CasinocoinAPI = require('../../src').CasinocoinAPI; // require('casinocoin-libjs')
 
-const source_address = 'cHb9CJAWyB4cj91VRWn96DkukG4bwdtyTh';
-const destination_address = 'cMhWoNXXXBBemk7UuKS2mvZBk355Nbk2YA';
+const source_address = 'cMhWoNXXXBBemk7UuKS2mvZBk355Nbk2YA';
+const destination_address = 'cHfUJkpqFoDqFJmDyV8ztg5QfoyMbL29Ap';
 // const destination_address = 'c3x6e4x6QzTSfQkWo8a1tsBob5QgZx5sxP3vS24V45uacrtyTYK9';
 
-const secret = 'snoPBcXtMeMyMHUVTgbuqAfg1SUTb';
+// const secret = 'snoPBcXtMeMyMHUVTgbuqAfg1SUTb';
+const secret = 'saBLJeygVP4r3kTCpWBUfsZ16sZPk';
 
 const api = new CasinocoinAPI({ server: 'ws://127.0.0.1:6006' });
 const instructions = { maxLedgerVersionOffset: 5, fee: '0.1' };
