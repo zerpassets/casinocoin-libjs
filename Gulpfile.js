@@ -208,4 +208,4 @@ gulp.task('version-beta', function() {
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['build', 'build-debug', 'build-min']);
+gulp.task('default', ['build', 'build-debug']);
