@@ -6,7 +6,7 @@ import type { Connection } from './connection'
 export type GetServerInfoResponse = {
     buildVersion: string,
     completeLedgers: string,
-    hostID: string,
+    // hostID: string,
     ioLatencyMs: number,
     load ? : {
         jobTypes: Array < Object > ,
@@ -40,37 +40,30 @@ function renameKeys(object, mapping) {
 }
 
 function getServerInfo(connection: Connection): Promise < GetServerInfoResponse > {
-    return connection.request({ command: 'server_info' }).then(response => {
+    return connection.request({ command: 'server_state' }).then(response => {
         const info = convertKeysFromSnakeCaseToCamelCase(response.info)
-        renameKeys(info, { hostid: 'hostID' })
+        // renameKeys(info, { hostid: 'hostID' })
         if (info.validatedLedger) {
             renameKeys(info.validatedLedger, {
-                baseFeeCsc: 'baseFeeCSC',
-                reserveBaseCsc: 'reserveBaseCSC',
-                reserveIncCsc: 'reserveIncrementCSC',
+                baseFee: 'baseFeeCSC',
+                reserveBase: 'reserveBaseCSC',
+                reserveInc: 'reserveIncrementCSC',
                 seq: 'ledgerVersion'
             })
-            info.validatedLedger.baseFeeCSC =
-                info.validatedLedger.baseFeeCSC.toString()
-            info.validatedLedger.reserveBaseCSC =
-                info.validatedLedger.reserveBaseCSC.toString()
-            info.validatedLedger.reserveIncrementCSC =
-                info.validatedLedger.reserveIncrementCSC.toString()
+            info.validatedLedger.baseFeeCSC = info.validatedLedger.baseFeeCSC.toString()
+            info.validatedLedger.reserveBaseCSC = info.validatedLedger.reserveBaseCSC.toString()
+            info.validatedLedger.reserveIncrementCSC = info.validatedLedger.reserveIncrementCSC.toString()
         }
         return info
     })
 }
 
-function computeFeeFromServerInfo(cushion: number,
-    serverInfo: GetServerInfoResponse
-): number {
-    return (Number(serverInfo.validatedLedger.baseFeeCSC) *
-        Number(serverInfo.loadFactor) * cushion).toString()
+function computeFeeFromServerInfo(cushion: number, serverInfo: GetServerInfoResponse): number {
+    return serverInfo.validatedLedger.baseFeeCSC
 }
 
 function getFee(connection: Connection, cushion: number) {
-    return getServerInfo(connection).then(
-        _.partial(computeFeeFromServerInfo, cushion))
+    return getServerInfo(connection).then(_.partial(computeFeeFromServerInfo, cushion))
 }
 
 module.exports = {
