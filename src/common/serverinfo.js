@@ -1,6 +1,6 @@
 'use strict' // eslint-disable-line strict
 const _ = require('lodash')
-const { convertKeysFromSnakeCaseToCamelCase } = require('./utils')
+const { convertKeysFromSnakeCaseToCamelCase, dropsToCsc } = require('./utils')
 import type { Connection } from './connection'
 
 export type GetServerInfoResponse = {
@@ -50,9 +50,9 @@ function getServerInfo(connection: Connection): Promise < GetServerInfoResponse 
                 reserveInc: 'reserveIncrementCSC',
                 seq: 'ledgerVersion'
             })
-            info.validatedLedger.baseFeeCSC = info.validatedLedger.baseFeeCSC.toString()
-            info.validatedLedger.reserveBaseCSC = info.validatedLedger.reserveBaseCSC.toString()
-            info.validatedLedger.reserveIncrementCSC = info.validatedLedger.reserveIncrementCSC.toString()
+            info.validatedLedger.baseFeeCSC = dropsToCsc(info.validatedLedger.baseFeeCSC.toString())
+            info.validatedLedger.reserveBaseCSC = dropsToCsc(info.validatedLedger.reserveBaseCSC.toString())
+            info.validatedLedger.reserveIncrementCSC = dropsToCsc(info.validatedLedger.reserveIncrementCSC.toString())
         }
         return info
     })
