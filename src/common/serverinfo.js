@@ -41,7 +41,7 @@ function renameKeys(object, mapping) {
 
 function getServerInfo(connection: Connection): Promise < GetServerInfoResponse > {
     return connection.request({ command: 'server_state' }).then(response => {
-        const info = convertKeysFromSnakeCaseToCamelCase(response.info)
+        const info = convertKeysFromSnakeCaseToCamelCase(response.state)
         // renameKeys(info, { hostid: 'hostID' })
         if (info.validatedLedger) {
             renameKeys(info.validatedLedger, {
