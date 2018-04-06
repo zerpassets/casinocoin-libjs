@@ -37,31 +37,24 @@ const preparePayment = require('./transaction/payment')
 const prepareTrustline = require('./transaction/trustline')
 const prepareOrder = require('./transaction/order')
 const prepareOrderCancellation = require('./transaction/ordercancellation')
-const prepareEscrowCreation =
-    require('./transaction/escrow-creation')
-const prepareEscrowExecution =
-    require('./transaction/escrow-execution')
-const prepareEscrowCancellation =
-    require('./transaction/escrow-cancellation')
-const preparePaymentChannelCreate =
-    require('./transaction/payment-channel-create')
-const preparePaymentChannelFund =
-    require('./transaction/payment-channel-fund')
-const preparePaymentChannelClaim =
-    require('./transaction/payment-channel-claim')
+const prepareEscrowCreation = require('./transaction/escrow-creation')
+const prepareEscrowExecution = require('./transaction/escrow-execution')
+const prepareEscrowCancellation = require('./transaction/escrow-cancellation')
+const preparePaymentChannelCreate = require('./transaction/payment-channel-create')
+const preparePaymentChannelFund = require('./transaction/payment-channel-fund')
+const preparePaymentChannelClaim = require('./transaction/payment-channel-claim')
 const prepareSettings = require('./transaction/settings')
 const sign = require('./transaction/sign')
 const combine = require('./transaction/combine')
 const submit = require('./transaction/submit')
 const errors = require('./common').errors
-const generateAddress =
-    require('./offline/generate-address').generateAddressAPI
+const generateAddress = require('./offline/generate-address').generateAddressAPI
 const computeLedgerHash = require('./offline/ledgerhash')
-const signPaymentChannelClaim =
-    require('./offline/sign-payment-channel-claim')
-const verifyPaymentChannelClaim =
-    require('./offline/verify-payment-channel-claim')
+const signPaymentChannelClaim = require('./offline/sign-payment-channel-claim')
+const verifyPaymentChannelClaim = require('./offline/verify-payment-channel-claim')
 const getLedger = require('./ledger/ledger')
+const signMessage = require('./offline/sign-message')
+const verifyMessage = require('./offline/verify-message')
 
 type APIOptions = {
     server ? : string,
@@ -154,7 +147,9 @@ _.assign(CasinocoinAPI.prototype, {
     computeLedgerHash,
     signPaymentChannelClaim,
     verifyPaymentChannelClaim,
-    errors
+    errors,
+    signMessage,
+    verifyMessage
 })
 
 // these are exposed only for use by unit tests; they are not part of the API

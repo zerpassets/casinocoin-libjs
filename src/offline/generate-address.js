@@ -7,7 +7,8 @@ function generateAddress(options ? : Object): Object {
     const secret = keypairs.generateSeed(options)
     const keypair = keypairs.deriveKeypair(secret)
     const address = keypairs.deriveAddress(keypair.publicKey)
-    return { secret, address }
+    const publicKey = keypair.publicKey;
+    return { secret, address, publicKey }
 }
 
 function generateAddressAPI(options ? : Object): Object {
