@@ -10,13 +10,22 @@ function convertStringToHex(inputString: string) {
     }
 }
 
-function signMessage(msg: string, secret: string): string {
+function signMessage(msg: string, secret: string): Object {
     const hexMessage = convertStringToHex(msg);
     let kp = keypairs.deriveKeypair(secret);
     if(hexMessage !== undefined){
-        return keypairs.sign(convertStringToHex(msg), kp.privateKey);
+        let signature = keypairs.signMessage(hexMessage, kp.privateKey);
+        return {
+            message: msg,
+            public_key: kp.publicKey,
+            signature: signature
+        };
     } else {
-        return null;
+        return {
+            message: msg,
+            public_key: kp.privateKey,
+            error: 'Error signing message'
+        };
     }
 }
 
