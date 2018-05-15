@@ -131,5 +131,12 @@ export type TransactionOptions = {
     maxLedgerVersion ? : number
 }
 
+export type KYCSet = {
+    kycAccount: string,
+    destination: string,
+    verified: boolean,
+    verifications: string[]
+}
+
 export type TransactionType = PaymentTransaction | OrderTransaction |
-    OrderCancellationTransaction | TrustlineTransaction | SettingsTransaction
+    OrderCancellationTransaction | TrustlineTransaction | SettingsTransaction | KYCSet

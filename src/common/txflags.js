@@ -40,6 +40,10 @@ const txFlags = {
     PaymentChannelClaim: {
         Renew: 0x00010000,
         Close: 0x00020000
+    },
+
+    KYC: {
+        KYCSet: 0x1000000
     }
 }
 

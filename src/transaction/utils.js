@@ -3,6 +3,7 @@
 const _ = require('lodash')
 const BigNumber = require('bignumber.js')
 const common = require('../common')
+const binary = require('casinocoin-libjs-binary-codec')
 const txFlags = common.txFlags
 import type { Instructions, Prepare } from './types.js'
 
@@ -31,13 +32,12 @@ function scaleValue(value, multiplier, extra = 0) {
     return (new BigNumber(value)).times(multiplier).plus(extra).toString()
 }
 
-function prepareTransaction(txJSON: Object, api: Object,
-    instructions: Instructions
-): Promise < Prepare > {
+function prepareTransaction(txJSON: Object, api: Object, instructions: Instructions): Promise < Prepare > {
     common.validate.instructions(instructions)
-
     const account = txJSON.Account
-    setCanonicalFlag(txJSON)
+    if(txJSON.TransactionType !== 'KYCSet'){
+        setCanonicalFlag(txJSON)
+    }
 
     function prepareMaxLedgerVersion(): Promise < Object > {
         if (instructions.maxLedgerVersion !== undefined) {

@@ -55,6 +55,8 @@ const verifyPaymentChannelClaim = require('./offline/verify-payment-channel-clai
 const getLedger = require('./ledger/ledger')
 const signMessage = require('./offline/sign-message')
 const verifyMessage = require('./offline/verify-message')
+const prepareKYCSet = require('./transaction/kyc')
+const getKYCInfo = require('./ledger/kycinfo')
 
 type APIOptions = {
     server ? : string,
@@ -127,6 +129,7 @@ _.assign(CasinocoinAPI.prototype, {
     getAccountInfo,
     getPaymentChannel,
     getLedger,
+    getKYCInfo,
 
     preparePayment,
     prepareTrustline,
@@ -139,6 +142,7 @@ _.assign(CasinocoinAPI.prototype, {
     preparePaymentChannelFund,
     preparePaymentChannelClaim,
     prepareSettings,
+    prepareKYCSet,
     sign,
     combine,
     submit,
