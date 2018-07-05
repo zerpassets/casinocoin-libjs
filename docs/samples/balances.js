@@ -1,7 +1,7 @@
 'use strict';
 const CasinocoinAPI = require('../../src').CasinocoinAPI; // require('casinocoin-libjs')
 
-const api = new CasinocoinAPI({ server: 'ws://127.0.0.1:6006' });
+const api = new CasinocoinAPI({ server: 'ws://wst02.casinocoin.org:7007' });
 //const address = 'cMhWoNXXXBBemk7UuKS2mvZBk355Nbk2YA';
 const address1 = 'cHb9CJAWyB4cj91VRWn96DkukG4bwdtyTh';
 const address2 = 'cMhWoNXXXBBemk7UuKS2mvZBk355Nbk2YA';

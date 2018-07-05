@@ -47,24 +47,28 @@ function formatAccountInfo(response: AccountDataResponse) {
     console.log('Account Data: ' + JSON.stringify(data));
     const kycVerified = ((data.Flags & kycFlags.KYCSet) !== 0)
     if(kycVerified){
-        // convert items to UUID values
-        var verificationsArray = data.KYC.Verifications;
-        verificationsArray.forEach((item, idx, arr) => {
-            verificationsArray[idx] = convertHexToUUID(item);
-        });
+        console.log('KYC Verified!');
+        var verificationsArray = [];
+        if(data.KYC.Verifications){
+            // convert items to UUID values
+            data.KYC.Verifications.forEach((item) => {
+                verificationsArray.push(convertHexToUUID(item));
+            });
+        }
         return removeUndefined({
             account: data.Account,
             verified: kycVerified,
             lastUpdated: data.KYC.Date,
-            scanReferences: verificationsArray
+            verifications: verificationsArray
         })
     } else {
+        console.log('NOT KYC Verified!');
         if(data.KYC){
             return removeUndefined({
                 account: data.Account,
                 verified: kycVerified,
                 lastUpdated: data.KYC.Date,
-                scanReferences: []
+                verifications: []
             })
         } else {
             return removeUndefined({

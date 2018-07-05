@@ -2,7 +2,7 @@
 
 const createHTTPServer = require('../src/http').createHTTPServer;
 const port = 5990;
-const serverUrl = 'wss://s1.casinocoin.org';
+const serverUrl = 'wss://ws01.casinocoin.org:4443';
 
 
 function main() {

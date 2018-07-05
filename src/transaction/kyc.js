@@ -11,15 +11,19 @@ import type { KYCSet } from '../ledger/transaction-types.js'
 function createKYCSetTransaction(kyc: KYCSet): Object {
     // convert verifications to 32 byte hex if necessary
     var verifications = [];
-    kyc.verifications.forEach(element => {
-        if(element.indexOf("-") !== -1 && element.length == 36){
-            // remove dashes
-            var hexUUID = element.replace(/-/g, "")
-            verifications.push(hexUUID.toUpperCase())
-        } else if(element.length == 32) {
-            verifications.push(element.toUpperCase())
-        }
-    });
+    if(kyc.verifications){
+        kyc.verifications.forEach(element => {
+            if(element.indexOf("-") !== -1 && element.length == 36){
+                // remove dashes
+                var hexUUID = element.replace(/-/g, "")
+                verifications.push(hexUUID.toUpperCase())
+            } else if(element.length == 32) {
+                verifications.push(element.toUpperCase())
+            } else {
+                console.log("invalid UUID: " + element);
+            }
+        });
+    }
     const txJSON: Object = {
         TransactionType: 'KYCSet',
         Account: kyc.kycAccount,

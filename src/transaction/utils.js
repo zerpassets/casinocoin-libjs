@@ -35,9 +35,7 @@ function scaleValue(value, multiplier, extra = 0) {
 function prepareTransaction(txJSON: Object, api: Object, instructions: Instructions): Promise < Prepare > {
     common.validate.instructions(instructions)
     const account = txJSON.Account
-    if(txJSON.TransactionType !== 'KYCSet'){
-        setCanonicalFlag(txJSON)
-    }
+    setCanonicalFlag(txJSON)
 
     function prepareMaxLedgerVersion(): Promise < Object > {
         if (instructions.maxLedgerVersion !== undefined) {
