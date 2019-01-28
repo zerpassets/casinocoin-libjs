@@ -1,0 +1,32 @@
+{
+  "type": "checkCreate",
+  "address": "chKrHT7Ju5YVnDm5vohjrRGr77bRXFPrPi",
+  "sequence": 3,
+  "id": "605A2E2C8E48AECAF5C56085D1AEAA0348DC838CE122C9188F94EB19DA05C2FE",
+  "specification": {
+    "destination": "cUkGLG1THAneZcdBfe7216pYtuvxicuMBY",
+    "sendMax": {
+      "currency": "CSC",
+      "value": "0.03"
+    },
+    "destinationTag": 1235,
+    "expiration": "2018-02-25T21:22:47.000Z",
+    "invoiceID": "DEADBEEF2FE8A32E40E1F2C05CF1C15545BAB56B617F9C6C2D63A6B704BEF59B"
+  },
+  "outcome": {
+    "result": "tesSUCCESS",
+    "timestamp": "2018-02-23T22:20:01.000Z",
+    "fee": "0.00000012",
+    "balanceChanges": {
+      "chKrHT7Ju5YVnDm5vohjrRGr77bRXFPrPi": [
+        {
+          "currency": "CSC",
+          "value": "-1.2e-7"
+        }
+      ]
+    },
+    "orderbookChanges": {},
+    "ledgerVersion": 6967458,
+    "indexInLedger": 1
+  }
+}

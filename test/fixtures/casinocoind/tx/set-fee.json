@@ -9,12 +9,12 @@
     "TransactionType": "SetFee",
     "Sequence": 0,
     "ReferenceFeeUnits": 10,
-    "ReserveBase": 50000000,
-    "ReserveIncrement": 12500000,
-    "BaseFee": "000000000000000A",
+    "ReserveBase": 1000000000,
+    "ReserveIncrement": 100000000,
+    "BaseFee": "F4240",
     "Fee": "0",
     "SigningPubKey": "",
-    "Account": "rrrrrrrrrrrrrrrrrrrrrhoLvTp",
+    "Account": "cNmnaAFVN3yHzuN43EsxgjhZG6FRuVY27o",
     "meta": {
       "TransactionIndex": 3,
       "AffectedNodes": [

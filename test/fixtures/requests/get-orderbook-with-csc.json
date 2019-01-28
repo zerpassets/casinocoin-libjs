@@ -1,0 +1,9 @@
+{
+  "base": {
+    "currency": "USD",
+    "counterparty": "c9QfjU3Z1WLrGuEMnxmaXXQMNT4GBu8xi8"
+  },
+  "counter": {
+    "currency": "CSC"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "taker_gets": {
+    "currency": "JPY",
+    "issuer": "cUyJuAXaPwe2TgBEzr1qkQMR6eCw6CT5Vn"
+  },
+  "taker_pays": {
+    "currency": "CSC"
+  },
+  "ledger_index": "validated",
+  "limit": 400,
+  "taker": "cGRAhAd1H8CUk9KsQzbL6MPeh6jGPTY3zd",
+  "command": "book_offers"
+}

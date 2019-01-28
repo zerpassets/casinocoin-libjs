@@ -1,0 +1,27 @@
+## request
+
+`request(command: string, options: object): Promise<object>`
+
+Returns the response from invoking the specified command, with the specified options, on the connected casinocoind server.
+
+Refer to [casinocoind APIs](https://casinocoin.org/build/casinocoind-apis/) for commands and options. All CSC amounts must be specified in drops. One drop is equal to 0.00000001 CSC. See [Specifying Currency Amounts](https://casinocoin.org/build/casinocoind-apis/#specifying-currency-amounts).
+
+Most commands return data for the `current` (in-progress, open) ledger by default. Do not rely on this. Always specify a ledger version in your request. In the example below, the 'validated' ledger is requested, which is the most recent ledger that has been validated by the whole network. See [Specifying Ledgers](https://casinocoin.org/build/casinocoind-apis/#specifying-ledgers).
+
+### Return Value
+
+This method returns a promise that resolves with the response from casinocoind.
+
+### Example
+
+```javascript
+// Replace 'ledger' with your desired casinocoind command
+return api.request('ledger', {
+  ledger_index: 'validated'
+}).then(response => {
+  /* Do something useful with response */
+  console.log(JSON.stringify(response, null, 2))
+}).catch(console.error);
+```
+
+<%- renderFixture('responses/ledger.json') %>

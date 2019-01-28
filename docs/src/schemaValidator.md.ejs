@@ -1,0 +1,35 @@
+## schemaValidator
+
+Unlike the rest of the casinocoin-libjs API, schemaValidator is a static object on CasinocoinAPI. It provides utility methods that do not use a server.
+
+## schemaValidate
+
+`CasinocoinAPI.schemaValidator.schemaValidate(schemaName: string, object: any): void`
+
+This method checks an object for conformance to a specified schema. It does not return anything, but will throw a `ValidationError` if the object does not conform to the schema.
+
+### Example
+
+```javascript
+CasinocoinAPI.schemaValidator.schemaValidate('sign', {
+    signedTransaction: '12000322800000002400000017201B008695536840000000000004B073210223D5F14BABD2A11A7DA7E5566D90122A6B33EAD2A3553EC9504AF990C5F1F33574473045022100CC7FB33156E3B66A25EF2D13F31780DA4BD240E710A971E7BCFD609FE93DE03602207901F5CDA70C621F88AC87F62EE84BE3274AC8CB09B5F5F4ED1B7A49A8C24707770E636173696E6F636F696E2E6F72678114D49507B818067890164DE50815FE336EE46CE995',
+    id: '65469B8745DA8AD3B53E6DE410081553E451EEBB03D10DA054C5E7A980CE28FB'
+})
+```
+
+```json
+undefined
+```
+
+If the object is valid (conforms to the schema), nothing is returned. Otherwise, `schemaValidate` throws an error:
+
+```javascript
+CasinocoinAPI.schemaValidator.schemaValidate('sign', {
+    signedTransaction: '12000322800000002400000017201B008695536840000000000004B073210223D5F14BABD2A11A7DA7E5566D90122A6B33EAD2A3553EC9504AF990C5F1F33574473045022100CC7FB33156E3B66A25EF2D13F31780DA4BD240E710A971E7BCFD609FE93DE03602207901F5CDA70C621F88AC87F62EE84BE3274AC8CB09B5F5F4ED1B7A49A8C24707770E636173696E6F636F696E2E6F72678114D49507B818067890164DE50815FE336EE46CE995',
+    id: '123'
+})
+```
+
+```
+[ValidationError(instance.id does not match pattern "^[A-F0-9]{64}$")]
+```

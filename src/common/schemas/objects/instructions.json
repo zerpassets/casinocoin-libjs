@@ -14,7 +14,7 @@
       "$ref": "value"
     },
     "maxFee": {
-      "description": "The maximum fee to pay for the transaction. See [Transaction Fees](#transaction-fees) for more information.",
+      "description": "Deprecated: Use `maxFeeCSC` in the CasinocoinAPI constructor instead. The maximum fee to pay for this transaction. If this exceeds `maxFeeCSC`, `maxFeeCSC` will be used instead. See [Transaction Fees](#transaction-fees) for more information.",
       "$ref": "value"
     },
     "maxLedgerVersion": {
@@ -25,7 +25,7 @@
       ]
     },
     "maxLedgerVersionOffset": {
-      "description": "Offset from current validated legder version to highest ledger version that the transaction can be included in.",
+      "description": "Offset from current validated ledger version to highest ledger version that the transaction can be included in.",
       "type": "integer",
       "minimum": 0
     },

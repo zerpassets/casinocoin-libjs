@@ -1,0 +1,17 @@
+{
+  "source": {
+    "address": "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb",
+    "amount": {
+      "value": "0.01",
+      "currency": "USD",
+      "counterparty": "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne"
+    }
+  },
+  "destination": {
+    "address": "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr",
+    "minAmount": {
+      "value": "0.01",
+      "currency": "CSC"
+    }
+  }
+}

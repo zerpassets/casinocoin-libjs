@@ -1,0 +1,37 @@
+## renameCounterpartyToIssuer
+
+`renameCounterpartyToIssuer(issue: {currency: string, counterparty: address}): {currency: string, issuer: address}`
+
+Returns an object with the `counterparty` field renamed to `issuer`. This is useful because CasinocoinAPI generally uses the name `counterparty` while the casinocoind API generally uses the name `issuer`.
+
+This is a static method on the `CasinocoinAPI` class.
+
+### Parameters
+
+This method takes one parameter, an object with a `counterparty` field.
+
+### Return Value
+
+This method returns a new object similar to the source object, but with `issuer` instead of `counterparty`.
+
+### Example
+
+```javascript
+const orderbookInfo = {
+  "base": {
+    "currency": "USD",
+    "counterparty": "cpa54XMDD4U9SNpx3xDQqDecUX9r6wcbKd"
+  },
+  "counter": {
+    "currency": "BTC",
+    "counterparty": "cpa54XMDD4U9SNpx3xDQqDecUX9r6wcbKd"
+  }
+};
+console.log(CasinocoinAPI.renameCounterpartyToIssuer(orderbookInfo.base))
+console.log(CasinocoinAPI.renameCounterpartyToIssuer(orderbookInfo.counter))
+```
+
+```
+{ currency: 'USD', issuer: 'cpa54XMDD4U9SNpx3xDQqDecUX9r6wcbKd' }
+{ currency: 'BTC', issuer: 'cpa54XMDD4U9SNpx3xDQqDecUX9r6wcbKd' }
+```

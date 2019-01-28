@@ -1,7 +1,22 @@
 {
-    "requireDestinationTag": true,
-    "disallowIncomingCSC": true,
-    "emailHash": "23463B99B62A72F26ED677CC556C44E8",
-    "domain": "example.com",
-    "transferRate": 1.002
+  "requireDestinationTag": true,
+  "disallowIncomingCSC": true,
+  "emailHash": "23463B99B62A72F26ED677CC556C44E8",
+  "domain": "example.com",
+  "transferRate": 1.002,
+  "signers": {
+    "threshold": 3,
+    "weights": [
+      {
+        "address": "cU3Ve6174VEwEXFMLjuwipxy8VYGBiBgXy",
+        "weight": 1
+      }, {
+        "address": "cD4SGmvMtF9Z2SxyGiSSJihSoMCUT6vUs3",
+        "weight": 1
+      }, {
+        "address": "cBfY22ZsqPuKFPyA91q1g9mVEZ5tEUEabA",
+        "weight": 1
+      }
+    ]
+  }
 }

@@ -1,0 +1,8 @@
+{
+  "txJSON": "{\"Account\":\"cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb\",\"TransactionType\":\"CheckCash\",\"CheckID\":\"838766BA2B995C00744175F69A1B11E32C3DBC40E64801A4056FCBD657F57334\",\"Amount\":\"100000000\",\"Flags\":2147483648,\"LastLedgerSequence\":8819954,\"Sequence\":23,\"Fee\":\"1200\"}",
+  "instructions": {
+    "fee": "0.000012",
+    "sequence": 23,
+    "maxLedgerVersion": 8819954
+  }
+}

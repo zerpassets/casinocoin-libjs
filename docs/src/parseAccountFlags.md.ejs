@@ -1,0 +1,35 @@
+## parseAccountFlags
+
+`parseAccountFlags(Flags: number): object`
+
+Parse an `AccountRoot` object's [`Flags`](https://casinocoin.org/build/reference-ledger-format.html#accountroot-flags).
+
+### Parameters
+
+This method takes one parameter, the AccountRoot `Flags` number to parse. Note that flags have different mappings on other types of objects or in transactions such as AccountSet.
+
+### Return Value
+
+This method returns an object with containing a key for each AccountRoot flag known to this version of CasinocoinAPI. Each flag has a boolean value of `true` or `false`.
+
+### Example
+
+```javascript
+const account_info = await api.request('account_info', {account: 'ca7ZGLJ7eHB63GCaWJa4fBM5896bgaFncc'})
+const flags = api.parseAccountFlags(account_info.account_data.Flags)
+console.log(JSON.stringify(flags, null, 2))
+```
+
+```json
+{
+  "passwordSpent": false,
+  "requireDestinationTag": false,
+  "requireAuthorization": false,
+  "depositAuth": true,
+  "disallowIncomingCSC": false,
+  "disableMasterKey": false,
+  "noFreeze": false,
+  "globalFreeze": false,
+  "defaultCasinocoin": false
+}
+```

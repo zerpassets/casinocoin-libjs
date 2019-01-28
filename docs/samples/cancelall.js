@@ -1,10 +1,10 @@
 'use strict';
 const CasinocoinAPI = require('../../dist/npm').CasinocoinAPI; // require('casinocoin-libjs')
 
-const address = 'rLDYrujdKUfVx28T9vRDAbyJ7G2WVXKo4K';
+const address = 'cHb9CJAWyB4cj91VRWn96DkukG4bwdtyTh';
 const secret = '';
 
-const api = new CasinocoinAPI({ server: 'wss://s1.casinocoin.com:443' });
+const api = new CasinocoinAPI({ server: 'ws://wst02.casinocoin.org:7007' });
 const instructions = { maxLedgerVersionOffset: 5 };
 
 function fail(message) {

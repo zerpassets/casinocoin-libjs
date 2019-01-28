@@ -1,0 +1,47 @@
+## cscToDrops
+
+`cscToDrops(csc: string | BigNumber): string`
+
+Converts an CSC amount to drops. 1 CSC = 100,000,000 drops, so 1 drop = 0.00000001 CSC. This method is useful when converting amounts for use with the casinocoind API, which requires CSC amounts to be specified in drops.
+
+### Parameters
+
+`csc`: A string or BigNumber representing an amount of CSC. If `csc` is a string, it may start with `-`, must contain at least one number, and may contain up to one `.`. This method throws a `ValidationError` for invalid input.
+
+### Return Value
+
+A string representing an equivalent amount of drops.
+
+### Example
+
+```javascript
+return api.cscToDrops('1');
+```
+
+```json
+'100000000'
+```
+
+## dropsToCsc
+
+`dropsToCsc(drops: string | BigNumber): string`
+
+Converts an amount of drops to CSC. 1 drop = 0.00000001 CSC, so 1 CSC = 100,000,000 drops. This method is useful when converting amounts from the casinocoind API, which describes CSC amounts in drops.
+
+### Parameters
+
+`drops`: A string or BigNumber representing an amount of drops. If `drops` is a string, it may start with `-` and must contain at least one number. This method throws a `ValidationError` for invalid input.
+
+### Return Value
+
+A string representing an equivalent amount of CSC.
+
+### Example
+
+```javascript
+return api.dropsToCsc('1');
+```
+
+```json
+'0.00000001'
+```

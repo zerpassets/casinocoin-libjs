@@ -1,11 +1,23 @@
-## generateAddress `generateAddress(): {address: string, secret: string}` Generate a new Casinocoin address and corresponding secret. ### Parameters
+## generateAddress
+
+`generateAddress(): {address: string, secret: string}`
+
+Generate a new CSC Ledger address and corresponding secret.
+
+### Parameters
 
 <%- renderSchema('input/generate-address.json') %>
 
-    ### Return Value This method returns an object with the following structure:
+### Return Value
 
-    <%- renderSchema('output/generate-address.json') %>
+This method returns an object with the following structure:
 
-        ### Example ```javascript return api.generateAddress(); ```
+<%- renderSchema('output/generate-address.json') %>
 
-        <%- renderFixture('responses/generate-address.json') %>
+### Example
+
+```javascript
+return api.generateAddress();
+```
+
+<%- renderFixture('responses/generate-address.json') %>

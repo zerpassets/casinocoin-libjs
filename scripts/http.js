@@ -1,15 +1,15 @@
 'use strict';
 
-const createHTTPServer = require('../src/http').createHTTPServer;
+const createHTTPServer = require('../dist/npm/http').createHTTPServer;
 const port = 5990;
-const serverUrl = 'wss://ws01.casinocoin.org:4443';
+const serverUrl = 'wss://s1.casinocoin.org';
 
 
 function main() {
-    const server = createHTTPServer({ server: serverUrl }, port);
-    server.start().then(() => {
-        console.log('Server started on port ' + String(port));
-    });
+  const server = createHTTPServer({server: serverUrl}, port);
+  server.start().then(() => {
+    console.log('Server started on port ' + String(port));
+  });
 }
 
 

@@ -1,0 +1,190 @@
+[
+  {
+    "type": "payment",
+    "address": "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb",
+    "sequence": 4,
+    "id": "167E2205FE17AAA98AEE6815547118CB02A0157C054BCCB5EE1CD98C7780958F",
+    "specification": {
+      "memos": [
+        {
+          "type": "client",
+          "format": "rt1.5.2"
+        }
+      ],
+      "source": {
+        "address": "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb",
+        "maxAmount": {
+          "currency": "CSC",
+          "value": "0.01112209"
+        }
+      },
+      "destination": {
+        "address": "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne"
+      },
+      "paths": "[[{\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"currency\":\"USD\"},{\"account\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"currency\":\"USD\"}]]"
+    },
+    "outcome": {
+      "result": "tesSUCCESS",
+      "fee": "0.0000001",
+      "deliveredAmount": {
+        "currency": "USD",
+        "value": "0.001",
+        "counterparty": "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne"
+      },
+      "balanceChanges": {
+        "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr": [
+          {
+            "counterparty": "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne",
+            "currency": "USD",
+            "value": "-0.001"
+          },
+          {
+            "counterparty": "cK2h6nq7ymW1Lqiqu9AYYTUVLTrUbmSqsz",
+            "currency": "USD",
+            "value": "0.001002"
+          }
+        ],
+        "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne": [
+          {
+            "counterparty": "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr",
+            "currency": "USD",
+            "value": "0.001"
+          }
+        ],
+        "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb": [
+          {
+            "currency": "CSC",
+            "value": "-0.01101208"
+          }
+        ],
+        "cK2h6nq7ymW1Lqiqu9AYYTUVLTrUbmSqsz": [
+          {
+            "currency": "CSC",
+            "value": "0.01101198"
+          },
+          {
+            "counterparty": "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr",
+            "currency": "USD",
+            "value": "-0.001002"
+          }
+        ]
+      },
+      "orderbookChanges": {
+        "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb": [
+          {
+            "direction": "buy",
+            "quantity": {
+              "currency": "CSC",
+              "value": "0.01101198"
+            },
+            "totalPrice": {
+              "currency": "USD",
+              "counterparty": "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr",
+              "value": "0.001002"
+            },
+            "makerExchangeRate": "10.99",
+            "sequence": 58,
+            "status": "partially-filled"
+          }
+        ]
+      },
+      "ledgerVersion": 348859,
+      "indexInLedger": 0
+    },
+    "rawTransaction": "{\"TransactionType\":\"Payment\",\"Flags\":0,\"Sequence\":4,\"Amount\":{\"value\":\"0.001\",\"currency\":\"USD\",\"issuer\":\"cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne\"},\"Fee\":\"10\",\"SendMax\":\"1112209\",\"SigningPubKey\":\"02BC8C02199949B15C005B997E7C8594574E9B02BA2D0628902E0532989976CF9D\",\"TxnSignature\":\"304502204EE3E9D1B01D8959B08450FCA9E22025AF503DEF310E34A93863A85CAB3C0BC5022100B61F5B567F77026E8DEED89EED0B7CAF0E6C96C228A2A65216F0DC2D04D52083\",\"Account\":\"cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb\",\"Destination\":\"cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne\",\"Memos\":[{\"Memo\":{\"MemoType\":\"636C69656E74\",\"MemoFormat\":\"7274312E352E32\"}}],\"Paths\":[[{\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"currency\":\"USD\"},{\"account\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"currency\":\"USD\"}]],\"hash\":\"167E2205FE17AAA98AEE6815547118CB02A0157C054BCCB5EE1CD98C7780958F\",\"ledger_index\":348859,\"meta\":{\"TransactionIndex\":0,\"AffectedNodes\":[{\"ModifiedNode\":{\"LedgerEntryType\":\"Offer\",\"PreviousTxnLgrSeq\":348433,\"PreviousTxnID\":\"8F571C346688D89AC1F737AE3B6BB5D976702B171CC7B4DE5CA3D444D5B8D6B4\",\"LedgerIndex\":\"3CFB3C79D4F1BDB1EE5245259372576D926D9A875713422F7169A6CC60AFA68B\",\"PreviousFields\":{\"TakerPays\":\"6209350000\",\"TakerGets\":{\"value\":\"5.65\",\"currency\":\"USD\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\"}},\"FinalFields\":{\"Flags\":0,\"Sequence\":58,\"BookNode\":\"0000000000000000\",\"OwnerNode\":\"0000000000000000\",\"BookDirectory\":\"4627DFFCFF8B5A265EDBD8AE8C14A52325DBFEDAF4F5C32E5E03E788E09BB000\",\"TakerPays\":\"6208248802\",\"TakerGets\":{\"value\":\"5.648998\",\"currency\":\"USD\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\"},\"Account\":\"cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb\"}}},{\"ModifiedNode\":{\"LedgerEntryType\":\"CasinocoinState\",\"PreviousTxnLgrSeq\":343703,\"PreviousTxnID\":\"5B2006DAD0B3130F57ACF7CC5CCAC2EEBCD4B57AAA091A6FD0A24B073D08ABB8\",\"LedgerIndex\":\"4BD1874F8F3A60EDB0C23F5BD43E07953C2B8741B226648310D113DE2B486F01\",\"PreviousFields\":{\"Balance\":{\"value\":\"0\",\"currency\":\"USD\",\"issuer\":\"cKVmFg7MnJepdx5N9HNZaqEF5rtYUQSiin\"}},\"FinalFields\":{\"Flags\":131072,\"LowNode\":\"0000000000000002\",\"HighNode\":\"0000000000000000\",\"Balance\":{\"value\":\"-0.001\",\"currency\":\"USD\",\"issuer\":\"cKVmFg7MnJepdx5N9HNZaqEF5rtYUQSiin\"},\"LowLimit\":{\"value\":\"0\",\"currency\":\"USD\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\"},\"HighLimit\":{\"value\":\"1\",\"currency\":\"USD\",\"issuer\":\"cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne\"}}}},{\"ModifiedNode\":{\"LedgerEntryType\":\"AccountRoot\",\"PreviousTxnLgrSeq\":343570,\"PreviousTxnID\":\"53354D84BAE8FDFC3F4DA879D984D24B929E7FEB9100D2AD9EFCD2E126BCCDC8\",\"LedgerIndex\":\"4F83A2CF7E70F77F79A307E6A472BFC2585B806A70833CCD1C26105BAE0D6E05\",\"PreviousFields\":{\"Sequence\":4,\"Balance\":\"9999999970\"},\"FinalFields\":{\"Flags\":0,\"Sequence\":5,\"OwnerCount\":3,\"Balance\":\"9998898762\",\"Account\":\"cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb\"}}},{\"ModifiedNode\":{\"LedgerEntryType\":\"AccountRoot\",\"PreviousTxnLgrSeq\":348433,\"PreviousTxnID\":\"8F571C346688D89AC1F737AE3B6BB5D976702B171CC7B4DE5CA3D444D5B8D6B4\",\"LedgerIndex\":\"F3E119AAA87AF3607CF87F5523BB8278A83BCB4142833288305D767DD30C392A\",\"PreviousFields\":{\"Balance\":\"912694201420\"},\"FinalFields\":{\"Flags\":0,\"Sequence\":59,\"OwnerCount\":10,\"Balance\":\"912695302618\",\"Account\":\"cK2h6nq7ymW1Lqiqu9AYYTUVLTrUbmSqsz\"}}},{\"ModifiedNode\":{\"LedgerEntryType\":\"CasinocoinState\",\"PreviousTxnLgrSeq\":348433,\"PreviousTxnID\":\"8F571C346688D89AC1F737AE3B6BB5D976702B171CC7B4DE5CA3D444D5B8D6B4\",\"LedgerIndex\":\"FA1255C2E0407F1945BCF9351257C7C5C28B0F5F09BB81C08D35A03E9F0136BC\",\"PreviousFields\":{\"Balance\":{\"value\":\"-5.5551658883365\",\"currency\":\"USD\",\"issuer\":\"cKVmFg7MnJepdx5N9HNZaqEF5rtYUQSiin\"}},\"FinalFields\":{\"Flags\":131072,\"LowNode\":\"000000000000000C\",\"HighNode\":\"0000000000000000\",\"Balance\":{\"value\":\"-5.5541638883365\",\"currency\":\"USD\",\"issuer\":\"cKVmFg7MnJepdx5N9HNZaqEF5rtYUQSiin\"},\"LowLimit\":{\"value\":\"0\",\"currency\":\"USD\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\"},\"HighLimit\":{\"value\":\"1000\",\"currency\":\"USD\",\"issuer\":\"cK2h6nq7ymW1Lqiqu9AYYTUVLTrUbmSqsz\"}}}}],\"TransactionResult\":\"tesSUCCESS\"},\"validated\":true}"
+  },
+  {
+    "type": "payment",
+    "address": "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb",
+    "id": "167E2205FE17AAA98AEE6815547118CB02A0157C054BCCB5EE1CD98C7780958F",
+    "sequence": 4,
+    "specification": {
+      "memos": [
+        {
+          "type": "client",
+          "format": "rt1.5.2"
+        }
+      ],
+      "source": {
+        "address": "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb",
+        "maxAmount": {
+          "currency": "CSC",
+          "value": "0.01112209"
+        }
+      },
+      "destination": {
+        "address": "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne"
+      },
+      "paths": "[[{\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"currency\":\"USD\"},{\"account\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"currency\":\"USD\"}]]"
+    },
+    "outcome": {
+      "result": "tesSUCCESS",
+      "fee": "0.0000001",
+      "deliveredAmount": {
+        "currency": "USD",
+        "value": "0.001",
+        "counterparty": "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne"
+      },
+      "balanceChanges": {
+        "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr": [
+          {
+            "counterparty": "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne",
+            "currency": "USD",
+            "value": "-0.001"
+          },
+          {
+            "counterparty": "cK2h6nq7ymW1Lqiqu9AYYTUVLTrUbmSqsz",
+            "currency": "USD",
+            "value": "0.001002"
+          }
+        ],
+        "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne": [
+          {
+            "counterparty": "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr",
+            "currency": "USD",
+            "value": "0.001"
+          }
+        ],
+        "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb": [
+          {
+            "currency": "CSC",
+            "value": "-0.01101208"
+          }
+        ],
+        "cK2h6nq7ymW1Lqiqu9AYYTUVLTrUbmSqsz": [
+          {
+            "currency": "CSC",
+            "value": "0.01101198"
+          },
+          {
+            "counterparty": "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr",
+            "currency": "USD",
+            "value": "-0.001002"
+          }
+        ]
+      },
+      "orderbookChanges": {
+        "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb": [
+          {
+            "direction": "buy",
+            "quantity": {
+              "currency": "CSC",
+              "value": "0.01101198"
+            },
+            "totalPrice": {
+              "currency": "USD",
+              "counterparty": "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr",
+              "value": "0.001002"
+            },
+            "makerExchangeRate": "10.99",
+            "sequence": 58,
+            "status": "partially-filled"
+          }
+        ]
+      },
+      "ledgerVersion": 348858,
+      "indexInLedger": 0
+    },
+    "rawTransaction": "{\"TransactionType\":\"Payment\",\"Flags\":0,\"Sequence\":4,\"Amount\":{\"value\":\"0.001\",\"currency\":\"USD\",\"issuer\":\"cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne\"},\"Fee\":\"10\",\"SendMax\":\"1112209\",\"SigningPubKey\":\"02BC8C02199949B15C005B997E7C8594574E9B02BA2D0628902E0532989976CF9D\",\"TxnSignature\":\"304502204EE3E9D1B01D8959B08450FCA9E22025AF503DEF310E34A93863A85CAB3C0BC5022100B61F5B567F77026E8DEED89EED0B7CAF0E6C96C228A2A65216F0DC2D04D52083\",\"Account\":\"cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb\",\"Destination\":\"cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne\",\"Memos\":[{\"Memo\":{\"MemoType\":\"636C69656E74\",\"MemoFormat\":\"7274312E352E32\"}}],\"Paths\":[[{\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"currency\":\"USD\"},{\"account\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\",\"currency\":\"USD\"}]],\"hash\":\"167E2205FE17AAA98AEE6815547118CB02A0157C054BCCB5EE1CD98C7780958F\",\"ledger_index\":348858,\"meta\":{\"TransactionIndex\":0,\"AffectedNodes\":[{\"ModifiedNode\":{\"LedgerEntryType\":\"Offer\",\"PreviousTxnLgrSeq\":348433,\"PreviousTxnID\":\"8F571C346688D89AC1F737AE3B6BB5D976702B171CC7B4DE5CA3D444D5B8D6B4\",\"LedgerIndex\":\"3CFB3C79D4F1BDB1EE5245259372576D926D9A875713422F7169A6CC60AFA68B\",\"PreviousFields\":{\"TakerPays\":\"6209350000\",\"TakerGets\":{\"value\":\"5.65\",\"currency\":\"USD\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\"}},\"FinalFields\":{\"Flags\":0,\"Sequence\":58,\"BookNode\":\"0000000000000000\",\"OwnerNode\":\"0000000000000000\",\"BookDirectory\":\"4627DFFCFF8B5A265EDBD8AE8C14A52325DBFEDAF4F5C32E5E03E788E09BB000\",\"TakerPays\":\"6208248802\",\"TakerGets\":{\"value\":\"5.648998\",\"currency\":\"USD\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\"},\"Account\":\"cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb\"}}},{\"ModifiedNode\":{\"LedgerEntryType\":\"CasinocoinState\",\"PreviousTxnLgrSeq\":343703,\"PreviousTxnID\":\"5B2006DAD0B3130F57ACF7CC5CCAC2EEBCD4B57AAA091A6FD0A24B073D08ABB8\",\"LedgerIndex\":\"4BD1874F8F3A60EDB0C23F5BD43E07953C2B8741B226648310D113DE2B486F01\",\"PreviousFields\":{\"Balance\":{\"value\":\"0\",\"currency\":\"USD\",\"issuer\":\"cKVmFg7MnJepdx5N9HNZaqEF5rtYUQSiin\"}},\"FinalFields\":{\"Flags\":131072,\"LowNode\":\"0000000000000002\",\"HighNode\":\"0000000000000000\",\"Balance\":{\"value\":\"-0.001\",\"currency\":\"USD\",\"issuer\":\"cKVmFg7MnJepdx5N9HNZaqEF5rtYUQSiin\"},\"LowLimit\":{\"value\":\"0\",\"currency\":\"USD\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\"},\"HighLimit\":{\"value\":\"1\",\"currency\":\"USD\",\"issuer\":\"cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne\"}}}},{\"ModifiedNode\":{\"LedgerEntryType\":\"AccountRoot\",\"PreviousTxnLgrSeq\":343570,\"PreviousTxnID\":\"53354D84BAE8FDFC3F4DA879D984D24B929E7FEB9100D2AD9EFCD2E126BCCDC8\",\"LedgerIndex\":\"4F83A2CF7E70F77F79A307E6A472BFC2585B806A70833CCD1C26105BAE0D6E05\",\"PreviousFields\":{\"Sequence\":4,\"Balance\":\"9999999970\"},\"FinalFields\":{\"Flags\":0,\"Sequence\":5,\"OwnerCount\":3,\"Balance\":\"9998898762\",\"Account\":\"cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb\"}}},{\"ModifiedNode\":{\"LedgerEntryType\":\"AccountRoot\",\"PreviousTxnLgrSeq\":348433,\"PreviousTxnID\":\"8F571C346688D89AC1F737AE3B6BB5D976702B171CC7B4DE5CA3D444D5B8D6B4\",\"LedgerIndex\":\"F3E119AAA87AF3607CF87F5523BB8278A83BCB4142833288305D767DD30C392A\",\"PreviousFields\":{\"Balance\":\"912694201420\"},\"FinalFields\":{\"Flags\":0,\"Sequence\":59,\"OwnerCount\":10,\"Balance\":\"912695302618\",\"Account\":\"cK2h6nq7ymW1Lqiqu9AYYTUVLTrUbmSqsz\"}}},{\"ModifiedNode\":{\"LedgerEntryType\":\"CasinocoinState\",\"PreviousTxnLgrSeq\":348433,\"PreviousTxnID\":\"8F571C346688D89AC1F737AE3B6BB5D976702B171CC7B4DE5CA3D444D5B8D6B4\",\"LedgerIndex\":\"FA1255C2E0407F1945BCF9351257C7C5C28B0F5F09BB81C08D35A03E9F0136BC\",\"PreviousFields\":{\"Balance\":{\"value\":\"-5.5551658883365\",\"currency\":\"USD\",\"issuer\":\"cKVmFg7MnJepdx5N9HNZaqEF5rtYUQSiin\"}},\"FinalFields\":{\"Flags\":131072,\"LowNode\":\"000000000000000C\",\"HighNode\":\"0000000000000000\",\"Balance\":{\"value\":\"-5.5541638883365\",\"currency\":\"USD\",\"issuer\":\"cKVmFg7MnJepdx5N9HNZaqEF5rtYUQSiin\"},\"LowLimit\":{\"value\":\"0\",\"currency\":\"USD\",\"issuer\":\"chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr\"},\"HighLimit\":{\"value\":\"1000\",\"currency\":\"USD\",\"issuer\":\"cK2h6nq7ymW1Lqiqu9AYYTUVLTrUbmSqsz\"}}}}],\"TransactionResult\":\"tesSUCCESS\"},\"validated\":true}"
+  }
+]

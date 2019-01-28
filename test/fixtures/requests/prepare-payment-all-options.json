@@ -1,27 +1,28 @@
 {
-    "source": {
-        "address": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
-        "maxAmount": {
-            "value": "0.01",
-            "currency": "CSC"
-        },
-        "tag": 14
+  "source": {
+    "address": "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb",
+    "maxAmount": {
+      "value": "0.01",
+      "currency": "CSC"
     },
-    "destination": {
-        "address": "rpZc4mVfWUif9CRoHRKKcmhu1nx2xktxBo",
-        "amount": {
-            "value": "0.01",
-            "currency": "CSC"
-        },
-        "tag": 58
+    "tag": 14
+  },
+  "destination": {
+    "address": "chnD92a3R6Eyr2x7ujNmS7GnwFDf3FrFbr",
+    "amount": {
+      "value": "0.01",
+      "currency": "CSC"
     },
-    "memos": [{
-        "type": "test",
-        "format": "plain/text",
-        "data": "texted data"
-    }],
-    "invoiceID": "A98FD36C17BE2B8511AD36DC335478E7E89F06262949F36EB88E2D683BBCC50A",
-    "noDirectCasinocoin": true,
-    "limitQuality": true,
-    "paths": "[[{\"account\":\"rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q\",\"currency\":\"USD\",\"issuer\":\"rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q\",\"type\":49,\"type_hex\":\"0000000000000031\"},{\"currency\":\"LTC\",\"issuer\":\"rfYv1TXnwgDDK4WQNbFALykYuEBnrR4pDX\",\"type\":48,\"type_hex\":\"0000000000000030\"},{\"account\":\"rfYv1TXnwgDDK4WQNbFALykYuEBnrR4pDX\",\"currency\":\"LTC\",\"issuer\":\"rfYv1TXnwgDDK4WQNbFALykYuEBnrR4pDX\",\"type\":49,\"type_hex\":\"0000000000000031\"}]]"
+    "tag": 58
+  },
+  "memos": [
+    {
+      "type": "test",
+      "format": "text/plain",
+      "data": "texted data"
+    }
+  ],
+  "invoiceID": "A98FD36C17BE2B8511AD36DC335478E7E89F06262949F36EB88E2D683BBCC50A",
+  "noDirectCasinocoin": true,
+  "limitQuality": true
 }

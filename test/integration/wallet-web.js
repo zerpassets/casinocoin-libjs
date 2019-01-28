@@ -1,7 +1,7 @@
 'use strict';
 
 function getAddress() {
-  return 'rQDhz2ZNXmhxzCYwxU6qAbdxsHA4HV45Y2';
+  return 'cBFUmfFUeo53yGGDuGMpdayKBT1vTDhnpe';
 }
 
 function getSecret() {

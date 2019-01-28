@@ -1,29 +1,33 @@
 {
-    "type": "escrowExecution",
-    "address": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh",
-    "sequence": 6,
-    "id": "CC5277137B3F25EE8B86259C83CB0EAADE818505E4E9BCBF19B1AC6FD1369931",
-    "specification": {
-        "owner": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh",
-        "escrowSequence": 5,
-        "condition": "632F2F3E437AE720C397994A985B5D21FE186DE61523A9CA3E8709CC581671A1"
+  "type": "escrowExecution",
+  "address": "cLKccc6TfhjG1G4ySAUuWNAkUSzwUer8Lj",
+  "sequence": 6,
+  "id": "CC5277137B3F25EE8B86259C83CB0EAADE818505E4E9BCBF19B1AC6FD1369931",
+  "specification": {
+    "owner": "cLKccc6TfhjG1G4ySAUuWNAkUSzwUer8Lj",
+    "escrowSequence": 5,
+    "condition": "632F2F3E437AE720C397994A985B5D21FE186DE61523A9CA3E8709CC581671A1"
+  },
+  "outcome": {
+    "result": "tesSUCCESS",
+    "timestamp": "2015-11-17T01:47:40.000Z",
+    "fee": "0.00000012",
+    "balanceChanges": {
+      "cLKccc6TfhjG1G4ySAUuWNAkUSzwUer8Lj": [
+        {
+          "currency": "CSC",
+          "value": "-1.2e-7"
+        }
+      ],
+      "c9QfjU3Z1WLrGuEMnxmaXXQMNT4GBu8xi8": [
+        {
+          "currency": "CSC",
+          "value": "0.10000043"
+        }
+      ]
     },
-    "outcome": {
-        "result": "tesSUCCESS",
-        "timestamp": "2015-11-17T01:47:40.000Z",
-        "fee": "0.000012",
-        "balanceChanges": {
-            "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh": [{
-                "currency": "CSC",
-                "value": "-0.000012"
-            }],
-            "rp8rJYTpodf8qbSCHVTNacf8nSW8mRakFw": [{
-                "currency": "CSC",
-                "value": "10.000043"
-            }]
-        },
-        "orderbookChanges": {},
-        "ledgerVersion": 14,
-        "indexInLedger": 0
-    }
+    "orderbookChanges": {},
+    "ledgerVersion": 14,
+    "indexInLedger": 0
+  }
 }

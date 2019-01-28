@@ -1,0 +1,12 @@
+{
+  "source": {
+    "address": "cDNYBTTga764ZEAux4knBLmizf2sYvEJWK"
+  },
+  "destination": {
+    "address": "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb",
+    "amount": {
+      "value": "1000002",
+      "currency": "CSC"
+    }
+  }
+}

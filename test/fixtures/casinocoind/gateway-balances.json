@@ -3,9 +3,9 @@
   "status": "success",
   "type": "response",
   "result": {
-    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
+    "account": "cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb",
     "assets": {
-      "r9F6wk8HkXrgYWoJ7fsv4VrUBVoqDVtzkH": [
+      "cGw6JHuiyQvsK9QMefvHuWt3zt9F7qk3G5": [
         {
         "currency": "BTC",
         "value": "5444166510000000e-26"
@@ -15,7 +15,7 @@
         "value": "100.0"
       }
       ],
-      "rwmUaXsWtXU4Z843xSYwgt1is97bgY8yj6": [
+      "c9eoy6wQ1A7zeBUXgbMrtJkNSCgkAYVN93": [
         {
         "currency": "BTC",
         "value": "8700000000000000e-30"
@@ -23,7 +23,7 @@
       ]
     },
     "balances": {
-      "rKm4uWpg9tfwbVSeATv4KxDe6mpE9yPkgJ": [
+      "cNqxmC6cmmaEBVeBwZ1WxYy7BioQfyBLrm": [
         {
         "currency": "EUR",
         "value": "29826.1965999999"
@@ -33,7 +33,7 @@
         "value": "10.0"
       }
       ],
-      "ra7JkEzrgeKHdzKgo4EUUVBnxggY4z37kt": [
+      "cYhGbm8oq8L1U8JyFUm5eVa9LCiZsAtRK": [
         {
         "currency": "USD",
         "value": "13857.70416"

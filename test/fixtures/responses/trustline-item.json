@@ -1,0 +1,13 @@
+{
+  "specification": {
+    "limit": "0",
+    "currency": "CHF",
+    "counterparty": "cpa54XMDD4U9SNpx3xDQqDecUX9r6wcbKd"
+  },
+  "counterparty": {
+    "limit": "0"
+  },
+  "state": {
+    "balance": "0.3488146605801446"
+  }
+}

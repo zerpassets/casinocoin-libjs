@@ -1,0 +1,8 @@
+{
+  "txJSON": "{\"Account\":\"cLPp8TAuVgFP45vDyrLrG73xmVV6CDJjRb\",\"TransactionType\":\"CheckCreate\",\"Destination\":\"cJcyvdykuUychWqNehMyN1BqbxF8xcfdhw\",\"SendMax\":\"100000000\",\"Flags\":2147483648,\"LastLedgerSequence\":8820051,\"Sequence\":23,\"Fee\":\"1200\"}",
+  "instructions": {
+    "fee": "0.000012",
+    "sequence": 23,
+    "maxLedgerVersion": 8820051
+  }
+}

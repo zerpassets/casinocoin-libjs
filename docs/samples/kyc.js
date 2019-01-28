@@ -6,11 +6,10 @@ const api = new CasinocoinAPI({ server: 'ws://wst02.casinocoin.org:7007' });
 const mainWallet = 'cHb9CJAWyB4cj91VRWn96DkukG4bwdtyTh';
 const kycAccount = 'cwmm2RkhynaPHXWCD94xcxLSVn1pJrU9Fh';
 const account1   = 'cHfUJkpqFoDqFJmDyV8ztg5QfoyMbL29Ap';
-const account2   = 'cHfUJkpqFoDqFJmDyV8ztg5QfoyMbL29Ap';
 const mainSecret = 'snoPBcXtMeMyMHUVTgbuqAfg1SUTb';
 const kycSecret = 'snU3EjU9kQXaLHgVYvXwZVPG293mq';
 
-const instructions = { maxLedgerVersionOffset: 5, fee: '0.02' };
+const instructions = { maxLedgerVersionOffset: 5, fee: '1' };
 const payment = {
     source: { address: "", maxAmount: { value: '100.0', currency: 'CSC' } },
     destination: { address: "", amount: { value: '100.0', currency: 'CSC' } },

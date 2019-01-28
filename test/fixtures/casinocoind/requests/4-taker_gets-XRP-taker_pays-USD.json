@@ -1,0 +1,13 @@
+{
+  "taker_gets": {
+    "currency": "CSC"
+  },
+  "taker_pays": {
+    "currency": "USD",
+    "issuer": "cpa54XMDD4U9SNpx3xDQqDecUX9r6wcbKd"
+  },
+  "ledger_index": "validated",
+  "limit": 400,
+  "taker": "cGRAhAd1H8CUk9KsQzbL6MPeh6jGPTY3zd",
+  "command": "book_offers"
+}

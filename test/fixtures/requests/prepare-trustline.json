@@ -1,6 +1,6 @@
 {
   "currency": "USD",
-  "counterparty": "rMH4UxPrbuMa1spCBR98hLLyNJp4d8p4tM",
+  "counterparty": "cLdqZR9Y2f3MmgkTbbhhc24YSAySnXbUne",
   "limit": "10000",
   "qualityIn": 0.91,
   "qualityOut": 0.87,
@@ -9,7 +9,7 @@
   "memos": [
     {
       "type": "test",
-      "format": "plain/text",
+      "format": "text/plain",
       "data": "texted data"
     }
   ]

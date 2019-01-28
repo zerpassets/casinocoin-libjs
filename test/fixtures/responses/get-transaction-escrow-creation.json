@@ -1,0 +1,38 @@
+{
+  "type": "escrowCreation",
+  "address": "cLKccc6TfhjG1G4ySAUuWNAkUSzwUer8Lj",
+  "sequence": 10,
+  "id": "144F272380BDB4F1BD92329A2178BABB70C20F59042C495E10BF72EBFB408EE1",
+  "specification": {
+    "amount": "0.00000002",
+    "destination": "c9QfjU3Z1WLrGuEMnxmaXXQMNT4GBu8xi8",
+    "memos": [
+      {
+        "type": "x2",
+        "format": "text/plain",
+        "data": "mema data"
+      }
+    ],
+    "condition": "A0258020E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855810100",
+    "allowCancelAfter": "2015-11-16T06:53:42.000Z",
+    "allowExecuteAfter": "2015-11-16T06:47:42.000Z",
+    "destinationTag": 2,
+    "sourceTag": 1
+  },
+  "outcome": {
+    "result": "tesSUCCESS",
+    "timestamp": "2015-11-16T06:43:00.000Z",
+    "fee": "0.00000012",
+    "balanceChanges": {
+      "cLKccc6TfhjG1G4ySAUuWNAkUSzwUer8Lj": [
+        {
+          "currency": "CSC",
+          "value": "-1.4e-7"
+        }
+      ]
+    },
+    "orderbookChanges": {},
+    "ledgerVersion": 15,
+    "indexInLedger": 0
+  }
+}

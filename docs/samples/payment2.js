@@ -8,7 +8,7 @@ const destination_address = 'cHfUJkpqFoDqFJmDyV8ztg5QfoyMbL29Ap';
 // const secret = 'snoPBcXtMeMyMHUVTgbuqAfg1SUTb';
 const secret = 'saBLJeygVP4r3kTCpWBUfsZ16sZPk';
 
-const api = new CasinocoinAPI({ server: 'ws://127.0.0.1:6006' });
+const api = new CasinocoinAPI({ server: 'ws://wst02.casinocoin.org:7007' });
 const instructions = { maxLedgerVersionOffset: 5, fee: '0.1' };
 
 const payment = {
